@@ -17,10 +17,9 @@ import pulumi_kubernetes as k8s
 
 # Configuration
 config = pulumi.Config()
-cloudflare_config = pulumi.Config("cloudflare")
 
 # Required configuration values
-account_id = cloudflare_config.require("accountId")
+account_id = config.require("accountId")
 zone_id = config.require("zoneId")
 domain = config.require("domain")
 

@@ -1,8 +1,6 @@
 config:
-  # Cloudflare provider configuration
-  cloudflare:accountId: "62507b6fe1cc39764e59f72b66e602ea"
-
   # Project-specific configuration
+  cloudflare-k3s-tunnel:accountId: "62507b6fe1cc39764e59f72b66e602ea"
   cloudflare-k3s-tunnel:domain: "ticko.africa"
   cloudflare-k3s-tunnel:zoneId: "d2b897605d20f4b68da776c298b53d8c"
   cloudflare-k3s-tunnel:k8sNamespace: "cloudflare-tunnel"
