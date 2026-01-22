@@ -4,7 +4,8 @@ config:
 
   # Project-specific configuration
   cloudflare-k3s-tunnel:domain: "ticko.africa"
-  cloudflare-k3s-tunnel:zoneId: "d2b897605d20f4b68da776c298b53d8c62507b6fe1cc39764e59f72b66e602ea62507b6fe1cc39764e59f72b66e602ea"
+  # NOTE: Update this with your actual Zone ID (32 characters, found in Cloudflare dashboard)
+  cloudflare-k3s-tunnel:zoneId: "YOUR_ZONE_ID_HERE"
   cloudflare-k3s-tunnel:k8sNamespace: "cloudflare-tunnel"
 
   # Services to expose via the tunnel
