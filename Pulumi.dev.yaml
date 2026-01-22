@@ -1,0 +1,18 @@
+config:
+  # Cloudflare provider configuration
+  cloudflare:accountId: "62507b6fe1cc39764e59f72b66e602ea"
+
+  # Project-specific configuration
+  cloudflare-k3s-tunnel:domain: "ticko.africa"
+  cloudflare-k3s-tunnel:zoneId: "d2b897605d20f4b68da776c298b53d8c62507b6fe1cc39764e59f72b66e602ea62507b6fe1cc39764e59f72b66e602ea"
+  cloudflare-k3s-tunnel:k8sNamespace: "cloudflare-tunnel"
+
+  # Services to expose via the tunnel
+  # Each service needs a subdomain and the internal k8s service URL
+  cloudflare-k3s-tunnel:services:
+    - subdomain: "jenkins"
+      service: "http://jenkins.jenkins.svc.cluster.local:8080"
+    - subdomain: "argocd"
+      service: "https://argocd-server.argocd.svc.cluster.local:443"
+    - subdomain: "grafana"
+      service: "http://grafana.monitoring.svc.cluster.local:3000"

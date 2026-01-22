@@ -1,0 +1,11 @@
+name: cloudflare-k3s-tunnel
+description: Expose k3s applications to the public using Cloudflare Tunnel
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: python
